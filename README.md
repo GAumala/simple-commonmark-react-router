@@ -1,6 +1,6 @@
 # Simple CommonMark React Router
 
-[![Build Status](https://travis-ci.org/GAumala/simple-commonmark-react-router.svg?branch=master)](https://travis-ci.org/GAumala/simple-commonmark-react-router)
+[![Build Status](https://travis-ci.org/GAumala/simple-commonmark-react-router.svg?branch=master)](https://travis-ci.org/GAumala/simple-commonmark-react-router) [![Coverage Status](https://coveralls.io/repos/github/GAumala/simple-commonmark-react-router/badge.svg?branch=master)](https://coveralls.io/github/GAumala/simple-commonmark-react-router?branch=master)
 
 Easily integrate [React Router](https://reacttraining.com/react-router/) with [simple-commonmark-react](https://github.com/GAumala/simple-commonmark-react)
 
