@@ -1,0 +1,7 @@
+node_modules
+coverage
+*.js
+*.js.map
+*.log
+*.d.ts
+!*.test.js
