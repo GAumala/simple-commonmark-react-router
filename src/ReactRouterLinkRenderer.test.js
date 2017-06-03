@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { shallow } from 'enzyme';
 
-import  ReactRouterLinkRenderer from './ReactRouterLinkRenderer.js'
+import  ReactRouterLinkRenderer from './ReactRouterLinkRenderer.ts'
 import { renderNodes } from 'simple-commonmark-react'
 
 const options = { customRenderers: { link: ReactRouterLinkRenderer } }

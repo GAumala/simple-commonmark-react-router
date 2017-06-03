@@ -1,6 +1,5 @@
 import { ReactElement, createElement } from 'react'
 import { Link } from 'react-router-dom'
-import { Node } from 'commonmark'
 import LinkRenderer from 'simple-commonmark-react/src/renderers/LinkRenderer'
 
 export default class ReactRouterLinkRender extends LinkRenderer {
