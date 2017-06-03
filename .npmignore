@@ -4,3 +4,5 @@ coverage
 *.js.map
 *.test.js
 *.log
+.babelrc
+src/__snapshots__/

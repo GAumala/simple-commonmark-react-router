@@ -1,17 +1,23 @@
-const ReactRouterLinkRenderer = require('./ReactRouterLinkRenderer.js').default
-const renderNodes = require('simple-commonmark-react').renderNodes
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { shallow } from 'enzyme';
 
-test('should render links with React Router\'s Link', () => {
-  const options = { customRenderers: { link: ReactRouterLinkRenderer } }
-  const markdown = 'Here is a [link](/some/path)'
+import  ReactRouterLinkRenderer from './ReactRouterLinkRenderer.js'
+import { renderNodes } from 'simple-commonmark-react'
 
-  const nodes = renderNodes(markdown, options)
-  expect(nodes.length).toEqual(1)
+const options = { customRenderers: { link: ReactRouterLinkRenderer } }
+const markdown = 'Here is a [link](/some/path)'
+const nodes = renderNodes(markdown, options)
 
-  const paragraph = nodes[0]
-  expect(paragraph.props.children.length).toEqual(2)
-
-  const link = paragraph.props.children[1]
-  expect(link.props.to).toEqual('/some/path')
-  expect(link.props.children).toEqual(['link'])
+test('should render markdown correctly', () => {
+  const component = renderer.create(<Router><div>{ nodes }</div></Router>)
+  const tree = component.toJSON()
+  expect(tree).toMatchSnapshot()
 })
+
+test('should render markdown with React Router\'s Link', () => {
+	const paragraphWrapper = shallow(nodes[0])
+  expect(paragraphWrapper.find(Link).length).toEqual(1)
+})
+

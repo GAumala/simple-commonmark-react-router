@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render markdown correctly 1`] = `
+<div>
+  <p
+    className={undefined}
+  >
+    Here is a 
+    <a
+      className={undefined}
+      href="/some/path"
+      onClick={[Function]}
+    >
+      link
+    </a>
+  </p>
+</div>
+`;

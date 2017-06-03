@@ -4,7 +4,15 @@
 
 Easily integrate [React Router](https://reacttraining.com/react-router/) with [simple-commonmark-react](https://github.com/GAumala/simple-commonmark-react)
 
+## Install
+
+```
+yarn add simple-commonmark-react-router
+```
+
 ## Example
+
+The following example renders markdown links with React Router's Link component.
 
 ```javascript
 import React from 'react'
